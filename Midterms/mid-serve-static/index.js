@@ -20,15 +20,3 @@ app.listen(port, () => {
     console.log('Listening on port ${port}')
 })
 
-
-//Reroute
-app.get('/', function (req, res) {
-    res.send(__dirname + '/' + 'error.html');
-});
-
-//Settings the listener to ENV PORT info
-const error = process.env.ERROR || error;
-
-app.listen(error, () => {
-    console.log(`Listening on port ${error}`)
-})
